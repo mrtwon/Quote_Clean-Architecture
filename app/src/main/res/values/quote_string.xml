@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next_text">Далее</string>
+    <string name="btn_share_text">Поделиться</string>
+    <string name="btn_repeat_text">Повторить</string>
+    <string name="tv_load">Загрузка …</string>
+</resources>

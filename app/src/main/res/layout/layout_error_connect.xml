@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/box_connect_error"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+    >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ошибка запроса\nПроверьте подключение к сети"
+    android:textSize="20sp"
+    android:textColor="#ddd"
+    android:gravity="center"
+    android:layout_marginBottom="10dp"
+    />
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_repeat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_repeat_text"
+    android:backgroundTint="#000000"
+    android:textSize="18sp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    app:strokeColor="#585858"
+    app:strokeWidth="2dp"
+    app:cornerRadius="20dp"
+    android:textColor="#ddd"
+    android:layout_gravity="center"
+    />
+</LinearLayout>
