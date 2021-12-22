@@ -1,6 +1,8 @@
 package com.mrtwon.quote.di.appComponent
 
-import com.mrtwon.quote.data.api.QuoteApi
+import com.mrtwon.quote.data.networkDataSource.NetworkDataSource
+import com.mrtwon.quote.data.networkDataSource.NetworkDataSourceImpl
+import com.mrtwon.quote.data.networkDataSource.QuoteApi
 import com.mrtwon.quote.manager.INetworkManager
 import com.mrtwon.quote.manager.NetworkManager
 import dagger.Module
@@ -12,6 +14,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Module()
 class NetworkModule {
+
+    @AppScope
+    @Provides
+    fun provideNetworkDataSource(quoteApi: QuoteApi): NetworkDataSource{
+        return NetworkDataSourceImpl(quoteApi)
+    }
 
     @AppScope
     @Provides

@@ -10,7 +10,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import javax.inject.Inject
 
-class RawDataSource @Inject constructor(val context: Context) {
+class RawDataSource @Inject constructor(val context: Context): LocalDataSource {
     private val RES_RAW_ID: Int = R.raw.quotes
 
     private fun getAllListQuotes(): List<QuoteModel>{
@@ -49,5 +49,9 @@ class RawDataSource @Inject constructor(val context: Context) {
             .map { str -> "$str\n" }
             .forEach { str -> stringBuilder.append(str) }
         return stringBuilder.toString()
+    }
+
+    override fun executeRandomQuote(): QuoteModel {
+        return randomQuote()
     }
 }

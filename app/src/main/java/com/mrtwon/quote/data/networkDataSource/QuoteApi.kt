@@ -1,4 +1,4 @@
-package com.mrtwon.quote.data.api
+package com.mrtwon.quote.data.networkDataSource
 
 import com.mrtwon.quote.data.models.QuoteModel
 import retrofit2.Call
